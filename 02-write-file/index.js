@@ -10,6 +10,10 @@ const rl = readline.createInterface({ input, output });
 
 console.log('\n Type something: \n');
 
+fs.writeFile(path.join(__dirname, '/some.txt'), "", (err)=> {
+  if(err) throw err
+});
+
 rl.on('line', (inputText) => {
     if(inputText === 'exit') {
       rl.close()
